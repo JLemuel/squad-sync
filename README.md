@@ -2,7 +2,7 @@
 
 SquadSync is an intuitive, web-based application designed to streamline the process of creating balanced teams in educational settings. Perfect for teachers, professors, and group facilitators, SquadSync takes the hassle out of organizing students into collaborative groups.
 
-![SquadSync Screenshot](./public/screenshot.png)
+![SquadSync Screenshot](./app/opengraph-image.png)
 
 ## Features
 
@@ -16,17 +16,41 @@ SquadSync is an intuitive, web-based application designed to streamline the proc
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/) - React framework for production
+- [Next.js 14](https://nextjs.org/) - React framework for production
 - [React](https://reactjs.org/) - JavaScript library for building user interfaces
 - [Zustand](https://github.com/pmndrs/zustand) - State management
 - [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
 - [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
 
+## Project Structure
+
+```
+squadsync/
+├── app/
+│   ├── components/
+│   │   ├── GroupList.tsx
+│   │   ├── StudentList.tsx
+│   │   └── GroupForm.tsx
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── opengraph-image.png
+├── public/
+│   └── (static files)
+├── store/
+│   └── useStore.ts
+├── types/
+│   └── index.ts
+├── README.md
+├── next.config.js
+├── tailwind.config.js
+└── package.json
+```
+
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v14 or later)
+- Node.js (v18 or later recommended for Next.js 14)
 - npm or yarn
 
 ### Installation
@@ -56,6 +80,15 @@ SquadSync is an intuitive, web-based application designed to streamline the proc
    ```
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Adding a Screenshot
+
+To add or update the screenshot in this README:
+
+1. Take a screenshot of your SquadSync application.
+2. Save the screenshot as `opengraph-image.png` in the `app/` directory.
+3. Next.js 14 will automatically optimize this image.
+4. Update the image reference in this README if necessary.
 
 ## Usage
 
