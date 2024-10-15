@@ -1,7 +1,7 @@
 'use client';
 
 import { Group, Student } from '../types';
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import TeamModal from './TeamModal';
 import Image from 'next/image';
 
@@ -37,7 +37,8 @@ export default function GroupList({ groups, students = [] }: GroupListProps) {
                                 return (
                                     <div key={index} className="flex items-center space-x-3 bg-muted p-3 rounded-[calc(var(--radius)-0.25rem)] transition-all duration-300 hover:bg-muted/80">
                                         <Image
-                                            src={student?.avatarUrl || '/default-avatar.png'}
+                                            loader={({ src }) => src}
+                                            src={student?.avatarUrl || ''}
                                             alt={memberName}
                                             width={40}
                                             height={40}

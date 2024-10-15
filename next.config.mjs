@@ -1,7 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['avataaars.io'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'api.dicebear.com',
+                port: '',
+                pathname: '/9.x/**',
+            },
+        ],
+        unoptimized: true,
+        domains: ['api.dicebear.com'],
     },
 };
 

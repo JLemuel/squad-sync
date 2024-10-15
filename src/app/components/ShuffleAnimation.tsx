@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Student } from '../types';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 interface ShuffleAnimationProps {
   students: Student[];
@@ -42,10 +43,13 @@ const ShuffleAnimation: React.FC<ShuffleAnimationProps> = ({ students, duration,
               transition={{ duration: 0.5 }}
               className="bg-muted p-4 rounded-[calc(var(--radius)-0.25rem)] shadow-md flex items-center space-x-3"
             >
-              <img
+              <Image
+                loader={({ src }) => src}
                 src={student.avatarUrl}
                 alt={student.name}
-                className="w-12 h-12 rounded-full"
+                width={48}
+                height={48}
+                className="rounded-full"
               />
               <span className="font-medium truncate">{student.name}</span>
             </motion.div>

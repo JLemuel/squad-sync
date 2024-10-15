@@ -21,10 +21,10 @@ interface AppState {
 }
 
 const initialStudents: Student[] = [
-  { id: 1, name: 'Alice Johnson', avatarUrl: getRandomAvatarUrl('Alice Johnson') },
-  { id: 2, name: 'Bob Smith', avatarUrl: getRandomAvatarUrl('Bob Smith') },
-  { id: 3, name: 'Charlie Brown', avatarUrl: getRandomAvatarUrl('Charlie Brown') },
-  { id: 4, name: 'Diana Ross', avatarUrl: getRandomAvatarUrl('Diana Ross') },
+  { id: 1, name: 'Alice Johnson', avatarUrl: getRandomAvatarUrl() },
+  { id: 2, name: 'Bob Smith', avatarUrl: getRandomAvatarUrl() },
+  { id: 3, name: 'Charlie Brown', avatarUrl: getRandomAvatarUrl() },
+  { id: 4, name: 'Diana Ross', avatarUrl: getRandomAvatarUrl() },
 ];
 
 export const useStore = create<AppState>()(
@@ -60,7 +60,7 @@ export const useStore = create<AppState>()(
           const newStudent: Student = {
             id: state.students.length + 1,
             name,
-            avatarUrl: getRandomAvatarUrl(name),
+            avatarUrl: getRandomAvatarUrl(),
           };
           state.students.push(newStudent);
         }));

@@ -18,7 +18,8 @@ const TeamModal: React.FC<TeamModalProps> = ({ group, students, onClose }) => {
             return (
               <div key={index} className="flex items-center space-x-4 bg-muted p-4 rounded-[calc(var(--radius)-0.25rem)]">
                 <Image
-                  src={student?.avatarUrl || '/default-avatar.png'}
+                  loader={({ src }) => src}
+                  src={student?.avatarUrl ?? ''}
                   alt={memberName}
                   width={64}
                   height={64}

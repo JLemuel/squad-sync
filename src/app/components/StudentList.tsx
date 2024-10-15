@@ -3,19 +3,23 @@
 import React from 'react';
 import Image from 'next/image';
 import { Student } from '../types';
+import { useRandomAvatar } from '../hooks/useRandomAvatar';
 
 interface StudentListProps {
     students: Student[];
 }
 
 const StudentCard = React.memo(({ student }: { student: Student }) => {
+  const avatarUrl = useRandomAvatar();
+
   return (
     <div className="bg-card rounded-[var(--radius)] p-6 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 cursor-pointer">
       <div className="flex items-center space-x-4">
         <Image
-          src={student.avatarUrl}
+          loader={({ src }) => src}
+          src={avatarUrl}
           alt={student.name}
-          width={48}    
+          width={48}
           height={48}
           className="rounded-full object-cover"
         />
@@ -28,6 +32,7 @@ const StudentCard = React.memo(({ student }: { student: Student }) => {
     </div>
   );
 });
+StudentCard.displayName = 'StudentCard';
 
 const StudentList = React.memo(({ students }: StudentListProps) => {
   return (
@@ -38,5 +43,6 @@ const StudentList = React.memo(({ students }: StudentListProps) => {
     </div>
   );
 });
+StudentList.displayName = 'StudentList';
 
 export default StudentList;
