@@ -2,7 +2,7 @@
 
 SquadSync is an intuitive, web-based application designed to streamline the process of creating balanced teams in educational settings. Perfect for teachers, professors, and group facilitators, SquadSync takes the hassle out of organizing students into collaborative groups.
 
-![SquadSync Screenshot](./app/opengraph-image.png)
+![SquadSync Screenshot](./src/app/opengraph-image.png)
 
 ## Features
 
