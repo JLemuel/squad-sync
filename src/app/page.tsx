@@ -8,7 +8,7 @@ import { Group, Student } from './types';
 import dynamic from 'next/dynamic';
 import { useStore } from './store/useStore';
 import ShuffleAnimation from './components/ShuffleAnimation';
-import LoadingSpinner from './components/LoadingSpinner';
+// import LoadingSpinner from './components/LoadingSpinner';
 import Image from 'next/image';
 
 const ConfettiWrapper = dynamic(() => import('./components/ConfettiWrapper'), {
@@ -21,7 +21,7 @@ export default function Home() {
     showTeams,
     students,
     triggerConfetti,
-    isLoading,
+    // isLoading,
     handleCreateGroups,
     handleResetGroups,
     handleAddStudent,
