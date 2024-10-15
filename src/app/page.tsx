@@ -9,6 +9,7 @@ import dynamic from 'next/dynamic';
 import { useStore } from './store/useStore';
 import ShuffleAnimation from './components/ShuffleAnimation';
 import LoadingSpinner from './components/LoadingSpinner';
+import Image from 'next/image';
 
 const ConfettiWrapper = dynamic(() => import('./components/ConfettiWrapper'), {
   ssr: false,
@@ -63,7 +64,20 @@ export default function Home() {
                 <h2 className="text-2xl font-semibold mb-4 text-card-foreground">
                   {showTeams ? 'Teams' : 'Members'}
                 </h2>
-                {showTeams ? (
+                {students.length === 0 ? (
+                  <div className="text-center py-12">
+                    <Image
+                      loader={({ src }) => src}
+                      src="https://api.dicebear.com/9.x/bottts/svg?seed=teamBot"
+                      alt="Team Avatar"
+                      width={96}
+                      height={96}
+                      className="mx-auto"
+                    />
+                    <h3 className="mt-4 text-xl font-semibold text-card-foreground">No participants yet</h3>
+                    <p className="mt-2 text-muted-foreground">Get started by adding participants to your team.</p>
+                  </div>
+                ) : showTeams ? (
                   <GroupList groups={groups} students={students} />
                 ) : (
                   <StudentList students={students} />
