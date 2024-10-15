@@ -57,7 +57,7 @@ squadsync/
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/squadsync.git
+   git clone https://github.com/JLemuel/squad-sync.git
    ```
 
 2. Navigate to the project directory:
