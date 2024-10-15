@@ -96,7 +96,7 @@ export default function GroupForm({ onCreateGroups, onResetGroups, onAddStudent,
             </div>
             <div>
                 <label htmlFor="manualStudent" className="block text-sm font-medium mb-1">
-                    Add Student
+                    Add Participant
                 </label>
                 <div className="flex">
                     <input
@@ -118,7 +118,7 @@ export default function GroupForm({ onCreateGroups, onResetGroups, onAddStudent,
             </div>
             <div>
                 <label htmlFor="searchStudent" className="block text-sm font-medium mb-1">
-                    Search Students
+                    Search Participants
                 </label>
                 <input
                     type="text"
@@ -131,7 +131,7 @@ export default function GroupForm({ onCreateGroups, onResetGroups, onAddStudent,
             </div>
             <div>
                 <div className="flex justify-between items-center mb-2">
-                    <label className="block text-sm font-medium">Students</label>
+                    <label className="block text-sm font-medium">Participants</label>
                     <button
                         type="button"
                         onClick={handleToggleAll}

@@ -79,6 +79,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="fixed bottom-4 left-4 text-[8px] text-muted-foreground bg-background/80 backdrop-blur-sm rounded-[var(--radius)] p-2 shadow-md">
+        Created by <a href="https://jlemuel.xyz" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">JLemuel</a>
+      </div>
     </>
   );
 }

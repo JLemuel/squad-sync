@@ -18,7 +18,7 @@ const ShuffleAnimation: React.FC<ShuffleAnimationProps> = ({ students, duration,
   }, [students]);
 
   useEffect(() => {
-    const shuffleInterval = setInterval(shuffleStudents, 500);
+    const shuffleInterval = setInterval(shuffleStudents, 250);
     const timer = setTimeout(() => {
       clearInterval(shuffleInterval);
       onComplete();
@@ -40,7 +40,7 @@ const ShuffleAnimation: React.FC<ShuffleAnimationProps> = ({ students, duration,
               initial={{ opacity: 0, scale: 0.8, rotateY: -180 }}
               animate={{ opacity: 1, scale: 1, rotateY: 0 }}
               exit={{ opacity: 0, scale: 0.8, rotateY: 180 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.25 }}
               className="bg-muted p-4 rounded-[calc(var(--radius)-0.25rem)] shadow-md flex items-center space-x-3"
             >
               <Image
