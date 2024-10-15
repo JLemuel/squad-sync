@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SquadSync
+
+SquadSync is an intuitive, web-based application designed to streamline the process of creating balanced teams in educational settings. Perfect for teachers, professors, and group facilitators, SquadSync takes the hassle out of organizing students into collaborative groups.
+
+![SquadSync Screenshot](./public/screenshot.png)
+
+## Features
+
+- **Dynamic Team Formation**: Create teams with a customizable number of groups.
+- **Student Management**: Add, remove, and search for students with ease.
+- **Visual Student Profiles**: Each student is represented by a unique avatar.
+- **Flexible Group Sizing**: Adjust the number of teams to fit your class size.
+- **Instant Team Generation**: Generate balanced teams with a single click.
+- **Dark Mode Interface**: A sleek, modern design that's easy on the eyes.
+- **Celebratory Animations**: Enjoy a burst of confetti when teams are created.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework for production
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Zustand](https://github.com/pmndrs/zustand) - State management
+- [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v14 or later)
+- npm or yarn
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/squadsync.git
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Navigate to the project directory:
+   ```
+   cd squadsync
+   ```
 
-## Learn More
+3. Install dependencies:
+   ```
+   npm install
+   # or
+   yarn install
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
+   ```
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Usage
 
-## Deploy on Vercel
+1. Add students using the "Add Student" input field.
+2. Set the desired number of teams.
+3. (Optional) Use the search feature to find specific students.
+4. Click "Create Teams" to generate balanced groups.
+5. Use the "Reset" button to start over.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+- [Avataaars](https://getavataaars.com/) for providing the avatar generation service.
+- [react-confetti](https://github.com/alampros/react-confetti) for the celebratory confetti effect.
+
+---
+
+Built with ❤️ by John Lemuel Nicolas
