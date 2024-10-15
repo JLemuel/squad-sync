@@ -12,13 +12,6 @@ interface GroupListProps {
 export default function GroupList({ groups, students = [] }: GroupListProps) {
     const [selectedGroup, setSelectedGroup] = useState<Group | null>(null);
 
-    const studentMap = useMemo(() => {
-        return students.reduce((acc, student) => {
-            acc[student.name] = student;
-            return acc;
-        }, {} as Record<string, Student>);
-    }, [students]);
-
     const handleGroupClick = (group: Group) => {
         setSelectedGroup(group);
     };

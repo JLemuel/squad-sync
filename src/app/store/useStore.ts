@@ -29,7 +29,7 @@ const initialStudents: Student[] = [
 
 export const useStore = create<AppState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       groups: [],
       students: initialStudents,
       showTeams: false,

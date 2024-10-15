@@ -1,11 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import GroupList from './components/GroupList';
 import GroupForm from './components/GroupForm';
 import StudentList from './components/StudentList';
 import { Group, Student } from './types';
-import { getRandomAvatarUrl } from './utils/avatar';
 import dynamic from 'next/dynamic';
 import { useStore } from './store/useStore';
 import ShuffleAnimation from './components/ShuffleAnimation';
