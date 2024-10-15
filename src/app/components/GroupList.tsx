@@ -3,6 +3,7 @@
 import { Group, Student } from '../types';
 import { useMemo, useState } from 'react';
 import TeamModal from './TeamModal';
+import Image from 'next/image';
 
 interface GroupListProps {
     groups: Group[];
@@ -35,8 +36,8 @@ export default function GroupList({ groups, students = [] }: GroupListProps) {
                                 const student = students.find(s => s.name === memberName);
                                 return (
                                     <div key={index} className="flex items-center space-x-3 bg-muted p-3 rounded-[calc(var(--radius)-0.25rem)] transition-all duration-300 hover:bg-muted/80">
-                                        <img
-                                            src={student?.avatarUrl}
+                                        <Image
+                                            src={student?.avatarUrl || '/default-avatar.png'}
                                             alt={memberName}
                                             width={40}
                                             height={40}

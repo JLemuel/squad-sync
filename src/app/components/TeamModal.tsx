@@ -1,4 +1,5 @@
 import { Group, Student } from '../types';
+import Image from 'next/image';
 
 interface TeamModalProps {
   group: Group;
@@ -16,10 +17,12 @@ const TeamModal: React.FC<TeamModalProps> = ({ group, students, onClose }) => {
             const student = students.find(s => s.name === memberName);
             return (
               <div key={index} className="flex items-center space-x-4 bg-muted p-4 rounded-[calc(var(--radius)-0.25rem)]">
-                <img
-                  src={student?.avatarUrl}
+                <Image
+                  src={student?.avatarUrl || '/default-avatar.png'}
                   alt={memberName}
-                  className="w-16 h-16 rounded-full border-3 border-primary"
+                  width={64}
+                  height={64}
+                  className="rounded-full border-3 border-primary"
                 />
                 <div>
                   <p className="font-semibold text-lg">{memberName}</p>
