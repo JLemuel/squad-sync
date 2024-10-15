@@ -18,13 +18,15 @@ interface AppState {
   handleCreateGroups: (newGroups: Group[]) => void;
   handleResetGroups: () => void;
   handleAddStudent: (name: string) => void;
+  isLoading: boolean;
+  setIsLoading: (isLoading: boolean) => void;
 }
 
 const initialStudents: Student[] = [
-  { id: 1, name: 'Alice Johnson', avatarUrl: getRandomAvatarUrl() },
-  { id: 2, name: 'Bob Smith', avatarUrl: getRandomAvatarUrl() },
-  { id: 3, name: 'Charlie Brown', avatarUrl: getRandomAvatarUrl() },
-  { id: 4, name: 'Diana Ross', avatarUrl: getRandomAvatarUrl() },
+  // { id: 1, name: 'Alice Johnson', avatarUrl: getRandomAvatarUrl() },
+  // { id: 2, name: 'Bob Smith', avatarUrl: getRandomAvatarUrl() },
+  // { id: 3, name: 'Charlie Brown', avatarUrl: getRandomAvatarUrl() },
+  // { id: 4, name: 'Diana Ross', avatarUrl: getRandomAvatarUrl() },
 ];
 
 export const useStore = create<AppState>()(
@@ -65,6 +67,8 @@ export const useStore = create<AppState>()(
           state.students.push(newStudent);
         }));
       },
+      isLoading: false,
+      setIsLoading: (isLoading) => set({ isLoading }),
     }),
     {
       name: 'team-shuffle-storage',

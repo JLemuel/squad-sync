@@ -8,6 +8,7 @@ import { Group, Student } from './types';
 import dynamic from 'next/dynamic';
 import { useStore } from './store/useStore';
 import ShuffleAnimation from './components/ShuffleAnimation';
+import LoadingSpinner from './components/LoadingSpinner';
 
 const ConfettiWrapper = dynamic(() => import('./components/ConfettiWrapper'), {
   ssr: false,
@@ -19,10 +20,12 @@ export default function Home() {
     showTeams,
     students,
     triggerConfetti,
+    isLoading,
     handleCreateGroups,
     handleResetGroups,
     handleAddStudent,
     setStudents,
+    setIsLoading,
   } = useStore();
 
   const [showShuffleAnimation, setShowShuffleAnimation] = useState(false);
@@ -32,10 +35,12 @@ export default function Home() {
   };
 
   const handleCreateGroupsWithAnimation = (newGroups: Group[]) => {
+    setIsLoading(true);
     setShowShuffleAnimation(true);
     setTimeout(() => {
       setShowShuffleAnimation(false);
       handleCreateGroups(newGroups);
+      setIsLoading(false);
     }, 5000);
   };
 
@@ -49,6 +54,7 @@ export default function Home() {
           onComplete={() => setShowShuffleAnimation(false)}
         />
       )}
+      {/* {isLoading && <LoadingSpinner />} */}
       <div className="h-full bg-background text-foreground p-6 overflow-auto relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

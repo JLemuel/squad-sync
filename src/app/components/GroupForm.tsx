@@ -61,6 +61,8 @@ export default function GroupForm({ onCreateGroups, onResetGroups, onAddStudent,
 
     const handleRemoveStudent = (studentToRemove: string) => {
         setSelectedStudents(selectedStudents.filter(student => student !== studentToRemove));
+        const updatedStudents = students.filter(student => student.name !== studentToRemove);
+        onUpdateStudents(updatedStudents);
     };
 
     const handleEditStudent = (oldName: string, newName: string) => {
@@ -185,6 +187,7 @@ export default function GroupForm({ onCreateGroups, onResetGroups, onAddStudent,
                                 type="button"
                                 onClick={() => handleRemoveStudent(student.name)}
                                 className="text-destructive hover:text-destructive/80 focus:outline-none"
+                                aria-label={`Remove ${student.name}`}
                             >
                                 <X size={16} />
                             </button>
